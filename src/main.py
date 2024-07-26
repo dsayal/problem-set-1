@@ -10,11 +10,6 @@ from datetime import datetime
 import analysis_network_centrality
 import analysis_similar_actors_genre
 
-import json
-import analysis_network_centrality
-import analysis_similar_actors_genre
-import os
-
 # Ingest and save the imbd_movies dataset
 DATA_URL = "https://github.com/cbuntain/umd.inst414/blob/main/data/imdb_movies_2000to2022.prolific.json?raw=true"
 LOCAL_DATA_PATH = "data/imdb_movies_2000to2022.prolific.json"
