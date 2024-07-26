@@ -76,6 +76,14 @@ def build_genre_df(file_path):
     return genre_df, actor_names
 
 def find_similar_actors(genre_df, actor_names):
+        """
+        Find the top 10 actors most similar to a query actor based on genre appearances.
+        Save the results to a CSV file and print them.
+
+        Parameters:
+        genre_df (pd.DataFrame): DataFrame where each row represents an actor and columns represent genre counts.
+        actor_names (dict): Dictionary mapping actor IDs to actor names.
+        """
     query_actor_id = 'nm1165110'  # Chris Hemsworth's actor ID
     query_actor_genres = genre_df.loc[query_actor_id].values.reshape(1, -1)
     distances = pairwise_distances(genre_df, query_actor_genres, metric='cosine').flatten()
